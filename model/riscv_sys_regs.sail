@@ -498,6 +498,7 @@ bitfield Mtvec : xlenbits = {
   Mode : 1 .. 0
 }
 register mtvec : Mtvec  /* Trap Vector */
+register miselect : xlenbits  /* Indirect CSR selector (Smcsrind/AIA) */
 
 function legalize_tvec(o : Mtvec, v : xlenbits) -> Mtvec = {
  let v = Mk_Mtvec(v);
